@@ -24,77 +24,76 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        html, body {
-            margin: 0;
-            padding: 0;
+        /*
+         * iOS Safari: 100vh inclui a barra do browser → conteúdo fica maior que o visível.
+         * -webkit-fill-available resolve isso: usa apenas a altura VISÍVEL.
+         */
+        html {
+            height: 100%;
+            height: -webkit-fill-available;
+        }
+
+        body {
             width: 100%;
             height: 100%;
             overflow: hidden;
             background: #121B22;
         }
 
-        /* position:fixed;inset:0 é a única abordagem 100% confiável em todos os browsers mobile */
         typebot-standard {
             display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
             width: 100%;
             height: 100%;
         }
     </style>
-</head>
-<body>
 
     <script>
-        // Injeta CSS diretamente no shadow DOM do typebot assim que ele montar
-        // CSS externo não penetra shadow DOM — precisa ser injetado internamente
-        function injectShadowCSS() {
-            var tb = document.querySelector('typebot-standard');
-            if (!tb) { setTimeout(injectShadowCSS, 100); return; }
-            if (!tb.shadowRoot) { setTimeout(injectShadowCSS, 100); return; }
-
-            var container = tb.shadowRoot.querySelector('.typebot-container');
-            if (!container) { setTimeout(injectShadowCSS, 100); return; }
-
-            // Força o container interno a preencher toda a altura real da janela
+        /*
+         * Fallback JS: força a altura real do viewport como variável CSS
+         * e aplica diretamente no <html> para garantir que height:100%
+         * no body e no typebot-standard herdem o valor correto.
+         */
+        function applyRealHeight() {
             var h = window.innerHeight;
-            container.style.cssText = [
-                'position: fixed',
-                'top: 0',
-                'left: 0',
-                'right: 0',
-                'bottom: 0',
-                'width: 100%',
-                'height: ' + h + 'px',
-                'overflow: hidden'
-            ].join(' !important; ') + ' !important;';
-
-            // Re-aplica ao redimensionar (rotação de tela, teclado virtual)
-            window.addEventListener('resize', function() {
-                container.style.height = window.innerHeight + 'px !important';
-            });
-
-            if (window.visualViewport) {
-                window.visualViewport.addEventListener('resize', function() {
-                    container.style.height = window.visualViewport.height + 'px !important';
-                });
-            }
+            document.documentElement.style.height = h + 'px';
         }
 
-        // Cria div #__next que o script chatecom precisa para inserir a barra de cabeçalho
-        var nextDiv = document.createElement('div');
-        nextDiv.id = '__next';
-        nextDiv.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;overflow:hidden;';
-        document.body.appendChild(nextDiv);
+        applyRealHeight();
+        window.addEventListener('resize', applyRealHeight);
+        window.addEventListener('orientationchange', function () {
+            setTimeout(applyRealHeight, 200);
+        });
 
-        // Inicia a tentativa de injeção no shadow DOM
-        injectShadowCSS();
+        /*
+         * Injeção de CSS no shadow DOM do Typebot.
+         * CSS externo NÃO penetra shadow DOM — precisa ser injetado via <style> internamente.
+         * Apenas força height:100% sem alterar position, para não causar recorte.
+         */
+        function injectShadowStyle() {
+            var tb = document.querySelector('typebot-standard');
+            if (!tb || !tb.shadowRoot) {
+                setTimeout(injectShadowStyle, 150);
+                return;
+            }
+            if (tb.shadowRoot.getElementById('fv-height-fix')) return;
+
+            var style = document.createElement('style');
+            style.id = 'fv-height-fix';
+            style.textContent =
+                '.typebot-container {' +
+                '  height: 100% !important;' +
+                '  max-height: 100% !important;' +
+                '  overflow: hidden !important;' +
+                '}';
+            tb.shadowRoot.appendChild(style);
+        }
+
+        injectShadowStyle();
     </script>
+</head>
+<body>
 
     <script type="module">
         import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js';
