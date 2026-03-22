@@ -24,50 +24,76 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        /* Fix iOS Safari 100vh bug — usa variável CSS atualizada via JS */
-        :root {
-            --app-height: 100%;
-        }
+        * { box-sizing: border-box; }
 
-        html {
-            height: 100%;
-            height: -webkit-fill-available; /* iOS Safari fallback */
-        }
-
-        body {
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            height: -webkit-fill-available;
             overflow: hidden;
+            background: #121B22;
         }
 
+        /* position:fixed;inset:0 é a única abordagem 100% confiável em todos os browsers mobile */
         typebot-standard {
             display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             width: 100%;
-            /* dvh = dynamic viewport height — desconta barra do browser automaticamente */
-            height: 100dvh;
-            /* Fallback para browsers que não suportam dvh */
-            height: var(--app-height);
-            /* Garante área segura em iPhones com notch/home indicator */
-            padding-bottom: env(safe-area-inset-bottom);
-            box-sizing: border-box;
+            height: 100%;
         }
     </style>
 </head>
 <body>
 
     <script>
-        // Calcula altura real da janela e atualiza CSS var — resolve iOS Safari 100vh bug
-        function setAppHeight() {
-            document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
+        // Injeta CSS diretamente no shadow DOM do typebot assim que ele montar
+        // CSS externo não penetra shadow DOM — precisa ser injetado internamente
+        function injectShadowCSS() {
+            var tb = document.querySelector('typebot-standard');
+            if (!tb) { setTimeout(injectShadowCSS, 100); return; }
+            if (!tb.shadowRoot) { setTimeout(injectShadowCSS, 100); return; }
+
+            var container = tb.shadowRoot.querySelector('.typebot-container');
+            if (!container) { setTimeout(injectShadowCSS, 100); return; }
+
+            // Força o container interno a preencher toda a altura real da janela
+            var h = window.innerHeight;
+            container.style.cssText = [
+                'position: fixed',
+                'top: 0',
+                'left: 0',
+                'right: 0',
+                'bottom: 0',
+                'width: 100%',
+                'height: ' + h + 'px',
+                'overflow: hidden'
+            ].join(' !important; ') + ' !important;';
+
+            // Re-aplica ao redimensionar (rotação de tela, teclado virtual)
+            window.addEventListener('resize', function() {
+                container.style.height = window.innerHeight + 'px !important';
+            });
+
+            if (window.visualViewport) {
+                window.visualViewport.addEventListener('resize', function() {
+                    container.style.height = window.visualViewport.height + 'px !important';
+                });
+            }
         }
-        setAppHeight();
-        window.addEventListener('resize', setAppHeight);
-        window.addEventListener('orientationchange', function() {
-            setTimeout(setAppHeight, 150); // delay para iOS terminar a rotação
-        });
+
+        // Cria div #__next que o script chatecom precisa para inserir a barra de cabeçalho
+        var nextDiv = document.createElement('div');
+        nextDiv.id = '__next';
+        nextDiv.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;overflow:hidden;';
+        document.body.appendChild(nextDiv);
+
+        // Inicia a tentativa de injeção no shadow DOM
+        injectShadowCSS();
     </script>
 
     <script type="module">
