@@ -1,0 +1,1716 @@
+{
+  "version": "6",
+  "id": "4366e56049494e5881df9c92ede76edd",
+  "name": "Lipedema Sem Complicações",
+  "events": [
+    {
+      "id": "ah00t1oupo6nebm08nqy630u",
+      "outgoingEdgeId": "b0yodvq9l11ulfru97nwy8my",
+      "graphCoordinates": {
+        "x": 384.29,
+        "y": -3.43
+      },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "j8isz7hfdul3ax78ixnqr1a5",
+      "title": "Configurações Avatar - Link da Imagem",
+      "graphCoordinates": {
+        "x": 338.66,
+        "y": 92.88
+      },
+      "blocks": [
+        {
+          "id": "aits08zwbxhsrcun7jlcnnt1",
+          "outgoingEdgeId": "kqf75rz8goggkqe9v2jyq4qo",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vtjch0odnwrsdhu2rpukcpk2k",
+            "expressionToEvaluate": "https://qbaqymzgvwcwqdsjliul.supabase.co/storage/v1/object/public/imagens/typeecom/1771811279215_freepik_35mm_film_photography_38yearold_woman_warm.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "glkwf5f0ybv6kaesprouuovm",
+      "title": "Tema - Não modifique esse código",
+      "graphCoordinates": {
+        "x": 735.73,
+        "y": 645.41
+      },
+      "blocks": [
+        {
+          "id": "na4lr7g9oxtf953whei2n6or",
+          "outgoingEdgeId": "uv6on5dnqvnfbksouitien4n",
+          "type": "Code",
+          "options": {
+            "name": "Script",
+            "content": "var script = document.createElement('script');\nscript.src = \"https://produto.comunidadeecom.com/chatecom_script_tema_whatsapp.js\";\ndocument.getElementsByTagName('head')[0].appendChild(script);\nscript.onload = function() {\n  criarBarra(\n    {{var_nome}},\n    {{var_avatar}},\n    {{var_urlWhatsapp}},\n    {{var_urlBack}},\n    {{var_mensagem}},\n    {{var_ativarIcon}}\n  );\n};"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xlprwuruzv9b08fmaz81p2xz",
+      "title": "AVATAR - Clique na imagem e troque pelo seu avatar",
+      "graphCoordinates": {
+        "x": -15.8,
+        "y": -6.28
+      },
+      "blocks": [
+        {
+          "id": "cuae0wqlihuenlo77xtay29d",
+          "type": "image",
+          "content": {
+            "url": "https://qbaqymzgvwcwqdsjliul.supabase.co/storage/v1/object/public/imagens/typeecom/1771811279215_freepik_35mm_film_photography_38yearold_woman_warm.png"
+          }
+        },
+        {
+          "id": "in7gchtmjrzyd1g5o59q2251",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Agora copie o link da imagem e cole na caixa Configurações Avatar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ozntaq9t7jsinghhk8ezhnlp",
+      "title": "Configurações Nome - Digite abaixo o nome do seu avatar",
+      "graphCoordinates": {
+        "x": 342.21,
+        "y": 350.54
+      },
+      "blocks": [
+        {
+          "id": "wuycmherkf678q51gw5f5h24",
+          "outgoingEdgeId": "giqgthax686opr9dhy6x8fku",
+          "type": "Set variable",
+          "options": {
+            "variableId": "viv61ffslhmirjrojy6lc6pab",
+            "expressionToEvaluate": "Renata Tinoco"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afq8h25dynprtcpnwr7ymf7i",
+      "title": "URL do Whatsapp - Adicione um Link, caso não queira deixe um #",
+      "graphCoordinates": {
+        "x": 728.24,
+        "y": -5.67
+      },
+      "blocks": [
+        {
+          "id": "v34587lcbrxioqgrokp7tnt9",
+          "outgoingEdgeId": "yp2s3z135nchvzcf78jhhing",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vd7wy5qpnr4imld4b3v8hh0oy",
+            "expressionToEvaluate": "#",
+            "type": "Custom"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cm24fevbqjy5lbjutbz2dn80",
+      "title": "Ativar Ícones - Valor: on / off",
+      "graphCoordinates": {
+        "x": 345.56,
+        "y": 533.69
+      },
+      "blocks": [
+        {
+          "id": "dot6us61rl5hcguj3ghxz94s",
+          "outgoingEdgeId": "oluiaaex8ddtk04kyke7bwte",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vfnbzji2r90xkn9syj9gujoku",
+            "expressionToEvaluate": "on",
+            "type": "Custom"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bcuv7mp1upzz4acmmo731y1p",
+      "title": "URL Back Redirect - Adicione um Link, caso não queira deixe um #",
+      "graphCoordinates": {
+        "x": 730.31,
+        "y": 202.5
+      },
+      "blocks": [
+        {
+          "id": "srvh7blv4pkd0jtobf5k9nu7",
+          "outgoingEdgeId": "iuebn1yph7uyeqmhem77ntki",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vi6o3xs2pkaxp4y7uex0hf2tg",
+            "expressionToEvaluate": "#"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ft3ulxqwvpa0vtdwj6i7urul",
+      "title": "Mensagem de Aviso no Inicio do Fluxo",
+      "graphCoordinates": {
+        "x": 732.37,
+        "y": 412.15
+      },
+      "blocks": [
+        {
+          "id": "zws372nzx01c5mr6nf2abhw7",
+          "outgoingEdgeId": "z9taqnz1fn3t46bklf23lydr",
+          "type": "Set variable",
+          "options": {
+            "variableId": "vi8hg46lxsx62zqeem6wjty6e",
+            "expressionToEvaluate": "Esta é uma conta comercial e não recebe ligações"
+          }
+        }
+      ]
+    },
+    {
+      "id": "3eef504e61304963bf4efb3ebe98754e",
+      "title": "CONEXÃO",
+      "graphCoordinates": {
+        "x": 1200,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "ab21703df4ff4faaa9f5dfc8",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Oi! 😊 Eu sou a Renata Tinoco, especialista em lipedema pelo Fluxo Vital."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d31efbedab2f4f4296688a11",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "le50u2zj1yiex2i9at84wg7s",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.ecomsupabase.com/supabase/public/workspaces/jvitor010@hotmail.com/typebots/4366e56049494e5881df9c92ede76edd/blocks/le50u2zj1yiex2i9at84wg7s?v=1773773769931"
+          }
+        },
+        {
+          "id": "bfe8936bad3e48f192d2efe6",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "594e64ca715647bc97de6220",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Antes de tudo, como posso te chamar? 🌸"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e071e79866a740f1a3402662",
+          "type": "text input",
+          "content": {
+            "label": "Seu nome"
+          },
+          "options": {
+            "variableId": "259da194b9a049edb7e0c04066cb96c3",
+            "labels": {
+              "placeholder": "Digite seu nome...",
+              "button": "Enviar"
+            }
+          }
+        },
+        {
+          "id": "a2f21849e047439185b65d30",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Que prazer te conhecer, {{NOME}}! 💕"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "3ace108ad56a42e09bcbde05",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "40720690558e415dbf11d59a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Me conta: o que mais te incomoda no lipedema hoje?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "f0bdb79f2a534719a1136b6e",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_f0bdb79f2a534719a1136b6e_0",
+              "type": 0,
+              "blockId": "f0bdb79f2a534719a1136b6e",
+              "content": "😩 A dor e o peso nas pernas"
+            },
+            {
+              "id": "choice_f0bdb79f2a534719a1136b6e_1",
+              "type": 0,
+              "blockId": "f0bdb79f2a534719a1136b6e",
+              "content": "😞 O inchaço que não passa"
+            },
+            {
+              "id": "choice_f0bdb79f2a534719a1136b6e_2",
+              "type": 0,
+              "blockId": "f0bdb79f2a534719a1136b6e",
+              "content": "😓 Não conseguir usar as roupas que quero"
+            },
+            {
+              "id": "choice_f0bdb79f2a534719a1136b6e_3",
+              "type": 0,
+              "blockId": "f0bdb79f2a534719a1136b6e",
+              "content": "😰 Tudo isso junto"
+            }
+          ],
+          "groupId": "3eef504e61304963bf4efb3ebe98754e",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "f81874e58f9047288b80"
+        }
+      ]
+    },
+    {
+      "id": "8b1718945c0c483db2b9baaf1f7ab141",
+      "title": "CONSCIENTIZAÇÃO",
+      "graphCoordinates": {
+        "x": 1600,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "92873a52b4a840fda3477131",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Eu entendo, {{NOME}}. O que você sente não é frescura e muito menos falta de esforço. 💙"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d31a4dcdd56e4ea8b9e9c4fe",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "38d66e5e75f547a5bc3c8033",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você já tentou algum tratamento para o lipedema antes?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "d7ea6cc9522944839327a727",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_d7ea6cc9522944839327a727_0",
+              "type": 0,
+              "blockId": "d7ea6cc9522944839327a727",
+              "content": "Sim, já tentei várias coisas e me frustrei"
+            },
+            {
+              "id": "choice_d7ea6cc9522944839327a727_1",
+              "type": 0,
+              "blockId": "d7ea6cc9522944839327a727",
+              "content": "Tentei algumas coisas mas sem resultado"
+            },
+            {
+              "id": "choice_d7ea6cc9522944839327a727_2",
+              "type": 0,
+              "blockId": "d7ea6cc9522944839327a727",
+              "content": "Não, ainda estou buscando o caminho certo"
+            }
+          ],
+          "groupId": "8b1718945c0c483db2b9baaf1f7ab141",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "20ff98bbf05b4d4da87d"
+        }
+      ]
+    },
+    {
+      "id": "19e1c65f288b4c81a38322f1df885a4e",
+      "title": "CURIOSIDADE",
+      "graphCoordinates": {
+        "x": 2000,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "bc383ec522144e93a1f4e8b9",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{NOME}}, isso é muito mais comum do que você imagina. A maioria das mulheres passa anos tentando errar até descobrir que o problema não é a falta de força de vontade — é a falta do protocolo certo. 🎯"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "fea07edac74642659304fc3d",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "1a8dfa03b84549df99f32c68",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Você já ouviu falar do Fluxo Vital: Lipedema Sem Complicações?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c4e65abad84641b3b78c2234",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_c4e65abad84641b3b78c2234_0",
+              "type": 0,
+              "blockId": "c4e65abad84641b3b78c2234",
+              "content": "Sim, já ouvi!"
+            },
+            {
+              "id": "choice_c4e65abad84641b3b78c2234_1",
+              "type": 0,
+              "blockId": "c4e65abad84641b3b78c2234",
+              "content": "Não, é a primeira vez"
+            }
+          ],
+          "groupId": "19e1c65f288b4c81a38322f1df885a4e",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        },
+        {
+          "id": "b14cc66631cc4714bc6e3595",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "É um aplicativo criado especialmente para quem tem lipedema. Ele ataca a raiz do problema — a inflamação crônica — e não apenas os sintomas."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "efd4ba4cdb584e3b9c0dec8e",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "9d1f5e4a39244c55a9993471",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{NOME}}, com qual dessas situações você mais se identifica?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "8833428cdecc4d49b16ed2d0",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_8833428cdecc4d49b16ed2d0_0",
+              "type": 0,
+              "blockId": "8833428cdecc4d49b16ed2d0",
+              "content": "😩 Presa no ciclo de dor e inchaço"
+            },
+            {
+              "id": "choice_8833428cdecc4d49b16ed2d0_1",
+              "type": 0,
+              "blockId": "8833428cdecc4d49b16ed2d0",
+              "content": "😴 Frustrada com dietas que não afinam"
+            },
+            {
+              "id": "choice_8833428cdecc4d49b16ed2d0_2",
+              "type": 0,
+              "blockId": "8833428cdecc4d49b16ed2d0",
+              "content": "💸 Cansada de gastar com tratamentos"
+            },
+            {
+              "id": "choice_8833428cdecc4d49b16ed2d0_3",
+              "type": 0,
+              "blockId": "8833428cdecc4d49b16ed2d0",
+              "content": "😔 Tudo isso ao mesmo tempo"
+            }
+          ],
+          "groupId": "19e1c65f288b4c81a38322f1df885a4e",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          }
+        },
+        {
+          "id": "109a1672dab744b5baf9f837",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "É exatamente para isso que o Fluxo Vital foi criado. Posso te mostrar como ele funciona?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "ddd70037529c4a5097752286",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_ddd70037529c4a5097752286_0",
+              "type": 0,
+              "blockId": "ddd70037529c4a5097752286",
+              "content": "Sim, quero saber! 🙋‍♀️"
+            },
+            {
+              "id": "choice_ddd70037529c4a5097752286_1",
+              "type": 0,
+              "blockId": "ddd70037529c4a5097752286",
+              "content": "Claro, me conta!"
+            }
+          ],
+          "groupId": "19e1c65f288b4c81a38322f1df885a4e",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "f9c054e345d34aa2a8b7"
+        }
+      ]
+    },
+    {
+      "id": "9049e6dd658f45129f96109934d138b9",
+      "title": "MECANISMO",
+      "graphCoordinates": {
+        "x": 2400,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "a5bb98b6fec241f2a8107be6",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "O Fluxo Vital usa o Mecanismo de Desinflamação Humanizada (EDH)™ 🌿"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "16238e850031410daa76364d",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "pcaldfoayzgtbnz0wykoh197",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.ecomsupabase.com/supabase/public/workspaces/jvitor010@hotmail.com/typebots/4366e56049494e5881df9c92ede76edd/blocks/pcaldfoayzgtbnz0wykoh197?v=1773774250246"
+          }
+        },
+        {
+          "id": "7af743b9e9ab4a80a837fa3f",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "2e9ffcdf0e3a4abb9e23d471",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E o mais incrível, {{NOME}}: você vai sentir a melhora acontecendo dia a dia, com ações simples de 5 a 10 minutos que cabem em qualquer rotina. 🗓️"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "180444178eb54bd2bca3a7f4",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "ad6421f0125b4a60b5a0011b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Quer ver os resultados reais que outras mulheres alcançaram?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "127689600b654098a3137425",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_127689600b654098a3137425_0",
+              "type": 0,
+              "blockId": "127689600b654098a3137425",
+              "content": "Quero ver! 👀"
+            },
+            {
+              "id": "choice_127689600b654098a3137425_1",
+              "type": 0,
+              "blockId": "127689600b654098a3137425",
+              "content": "Sim, me mostra!"
+            }
+          ],
+          "groupId": "9049e6dd658f45129f96109934d138b9",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "68d59b2eb0a14a319dc1"
+        }
+      ]
+    },
+    {
+      "id": "847351de809c4f0e9deeccc413cc447d",
+      "title": "BENEFÍCIOS",
+      "graphCoordinates": {
+        "x": 2800,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "c9845cbe272a4fac92c95d6d",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Veja o que você vai conquistar com o Fluxo Vital:"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "2dd908b5c2ff49e392c0cfb3",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "6971a06601c7424bbeba80ac",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "✨ Redução da dor e do inchaço nas pernas\n😴 Rotina de autocuidado leve e prazerosa\n🔥 Mais disposição e mobilidade no dia a dia\n🌱 Menos ansiedade e frustração com a condição\n💪 Confiança para cuidar do próprio corpo\n👗 Voltar a usar as roupas que você ama"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "a26ba0d69fcd4e009f9d278a",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "ea988cbc314746cd9a2a513b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Tudo isso em apenas 3 semanas, {{NOME}}! 🎯"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "eef88dfd30654b7f92aa6a5a",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "b7e632b2ef884071a33ee6dc",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Posso te mostrar depoimentos de mulheres que já vivem isso?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "316abd292a8f4fbc9eb73ace",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_316abd292a8f4fbc9eb73ace_0",
+              "type": 0,
+              "blockId": "316abd292a8f4fbc9eb73ace",
+              "content": "Sim, quero ver! 🙋‍♀️"
+            }
+          ],
+          "groupId": "847351de809c4f0e9deeccc413cc447d",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "fcca4ab14b30429481ee"
+        }
+      ]
+    },
+    {
+      "id": "eb99f55d65084f51afb9bc52cf4e037c",
+      "title": "PROVA_SOCIAL",
+      "graphCoordinates": {
+        "x": 3200,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "bf56deabf53542689a5ecddb",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Olha o que nossas alunas estão dizendo sobre o Fluxo Vital 💬"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "428e17e8fb574f88b14a316b",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "e729bb574ade42b29f7abe86",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\"Eu achava que o lipedema era uma sentença de dor. Em poucas semanas minha mobilidade melhorou muito e a dor diminuiu.\" – Ana, São Paulo 🌟"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "19f36176760f427481425de1",
+          "type": "image",
+          "content": {
+            "url": "https://s3.ecomsupabase.com/supabase/public/workspaces/jvitor010@hotmail.com/typebots/4366e56049494e5881df9c92ede76edd/blocks/bn65wkpwkp7vj7iztj0t7sds?v=1773774675552"
+          }
+        },
+        {
+          "id": "69adefa48b4d4f688c2c346c",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "3ebd7ab166d54980a7d89bce",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\"Foi tão simples que minha filha me ajudou a organizar. Minha disposição mudou completamente.\" – Maria, Rio de Janeiro 💪"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "70a44005bc4742e1aaeb8142",
+          "type": "image",
+          "content": {
+            "url": "https://s3.ecomsupabase.com/supabase/public/workspaces/jvitor010@hotmail.com/typebots/4366e56049494e5881df9c92ede76edd/blocks/lo99zj0mt8p5qh36sp27nj21?v=1773774708492"
+          }
+        },
+        {
+          "id": "b8b894c40c5f4729b9687ab5",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "9811a6becd164a28afcdae2a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "\"Saí do ciclo de tratamentos caros e finalmente senti alívio real em 21 dias.\" – Joana, Minas Gerais 🧘‍♀️"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "a952b4b124784cb4ad13e7e0",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "e1d56ccf2a96449f9582a639",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{NOME}}, você merece sentir o mesmo. E eu tenho uma oferta especial para você agora. Posso continuar?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "28fcebb63844441bbabb758c",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_28fcebb63844441bbabb758c_0",
+              "type": 0,
+              "blockId": "28fcebb63844441bbabb758c",
+              "content": "Sim, quero saber! 💕"
+            },
+            {
+              "id": "choice_28fcebb63844441bbabb758c_1",
+              "type": 0,
+              "blockId": "28fcebb63844441bbabb758c",
+              "content": "Claro, continua!"
+            }
+          ],
+          "groupId": "eb99f55d65084f51afb9bc52cf4e037c",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "5855d0e795294fbe842b"
+        }
+      ]
+    },
+    {
+      "id": "ecfc2899ba7a4cec9a63fb9806738a1b",
+      "title": "OPORTUNIDADE",
+      "graphCoordinates": {
+        "x": 3605,
+        "y": -300
+      },
+      "blocks": [
+        {
+          "id": "bea4bc2f59874a38acdf24a4",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{NOME}}, um acompanhamento completo como o Fluxo Vital poderia facilmente custar R$ 197 ou mais por mês..."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "751ac01d9277459fb1493612",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "1a759fa408124fc1afe2ae1b",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Mas por tempo limitado, você garante acesso completo por apenas:\n\n💚 R$ 37,00 por mês\n\nMenos que uma única sessão de drenagem!"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "318197c73480494ea6163cef",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "e40931d3ced244c6a33529ec",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "E ao entrar hoje, você ainda ganha 3 bônus exclusivos:\n\n🎁 Guia de Rótulos Inteligentes (R$47)\n🎁 Consultoria de Estilo e Conforto (R$97)\n🎁 Comunidade Exclusiva de Guerreiras (R$197)\n\nTotal em bônus: R$ 341,00 — inclusos sem custo!"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b3f84bcf5c774165a184a931",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "cf25a199fc2c44cdb972668a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "🛡️ E você ainda tem 30 dias de Garantia Blindada. Se não sentir melhora ou não se apaixonar pelo método, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "74434e421a744c09b9dc7947",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "4f3c0e9f8d164f77b45f7256",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{NOME}}, você vai aproveitar essa chance de virar o jogo?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "77b04c926643462cb1d7a435",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_77b04c926643462cb1d7a435_0",
+              "type": 0,
+              "blockId": "77b04c926643462cb1d7a435",
+              "content": "Sim! Quero garantir meu acesso 💚"
+            },
+            {
+              "id": "choice_77b04c926643462cb1d7a435_1",
+              "type": 0,
+              "blockId": "77b04c926643462cb1d7a435",
+              "content": "Tenho uma dúvida antes..."
+            }
+          ],
+          "groupId": "ecfc2899ba7a4cec9a63fb9806738a1b",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "ee39c22b84574be38da9"
+        }
+      ]
+    },
+    {
+      "id": "3729f02d8a1c445aa8ad1434eb56a353",
+      "title": "RISCOS_E_PERDAS",
+      "graphCoordinates": {
+        "x": 4000,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "86645e2bdf8d4bad99d7f862",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Entendo que toda decisão merece reflexão. 💙"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "39e59639b53b47a4b17a0022",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "8023c4d3fd364ffcab066a3a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Mas me conta: continuar com dor, inchaço e restrições todos os dias... isso não tem um custo ainda maior? 😔"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e1e1ceff648c407cb079c33e",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "e0c26ffe95ca4f3cba3b3e8a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ao escolher o Fluxo Vital, você para de:\n\n❌ Acordar com as pernas pesadas e doloridas\n❌ Gastar com tratamentos caros que não resolvem\n❌ Sentir vergonha do próprio corpo\n❌ Viver com medo da próxima crise de dor"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "9fc82bd95b794688b8ae6bef",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "88bc7876a13f4be8ac8c8cda",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Por apenas R$ 37,00 — com 30 dias de garantia total — você pode começar a mudança hoje. Vamos juntas? 💚"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "43ff0a5f2f384f25afcfaa8e",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "choice_43ff0a5f2f384f25afcfaa8e_0",
+              "type": 0,
+              "blockId": "43ff0a5f2f384f25afcfaa8e",
+              "content": "Quero garantir meu acesso agora! 💚"
+            },
+            {
+              "id": "choice_43ff0a5f2f384f25afcfaa8e_1",
+              "type": 0,
+              "blockId": "43ff0a5f2f384f25afcfaa8e",
+              "content": "Sim, vou começar hoje! 💪"
+            }
+          ],
+          "groupId": "3729f02d8a1c445aa8ad1434eb56a353",
+          "options": {
+            "buttonLabel": "Send",
+            "isSearchable": false,
+            "isMultipleChoice": false,
+            "searchInputPlaceholder": "Filter the options..."
+          },
+          "outgoingEdgeId": "fd9b1ae7f72c428998e0"
+        }
+      ]
+    },
+    {
+      "id": "209facf9a2b94c978dc11b068e28f816",
+      "title": "FECHAMENTO_DA_VENDA",
+      "graphCoordinates": {
+        "x": 4400,
+        "y": 0
+      },
+      "blocks": [
+        {
+          "id": "1944aa0dfa784f088e2d6bc5",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "{{NOME}}, que ótimo! Essa é a sua virada. 🎉"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "3b2eb0dccfb94485be5b2196",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "mwxkol4wy1u57u1limc1mbwo",
+          "type": "audio",
+          "content": {
+            "url": "https://s3.ecomsupabase.com/supabase/public/workspaces/jvitor010@hotmail.com/typebots/4366e56049494e5881df9c92ede76edd/blocks/mwxkol4wy1u57u1limc1mbwo?v=1773774193151"
+          }
+        },
+        {
+          "id": "75f74ce172374aaebbb171ce",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "dbbf2123d9e84f18b6d06e8a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Aqui está o seu link exclusivo para garantir acesso imediato ao Fluxo Vital por R$ 37,00:\n\n👇 Clique abaixo para acessar agora:"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c9e9011d162f4c5793a90509",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "29d0b46b6bdb47b0851ece1c",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "type": "a",
+                    "url": "https://lastlink.com/p/C98F2075B/checkout-payment/",
+                    "children": [
+                      {
+                        "text": "✅ GARANTIR MEU ACESSO — R$ 37,00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "481f3611510c4ec5a50004a8",
+          "type": "Wait",
+          "content": {},
+          "options": {
+            "secondsToWaitFor": "2"
+          }
+        },
+        {
+          "id": "406f00768ac043419ef9236a",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Após o pagamento, seu acesso é liberado na hora. Qualquer dúvida, é só me chamar! 💕\n\nEstou aqui por você, {{NOME}}. 🌸"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "y1hukis4fs1kp5ncj5hdlgjf",
+      "title": "Group #18",
+      "graphCoordinates": {
+        "x": 4403.79,
+        "y": 1013.44
+      },
+      "blocks": [
+        {
+          "id": "v0dhgqjcgzsy9ttrww7y0gwm",
+          "type": "Pixel",
+          "options": {
+            "pixelId": "985855429587580",
+            "params": [
+              {
+                "id": "ebk2e1olpnt08y0yx80pwxky"
+              }
+            ],
+            "eventType": "InitiateCheckout"
+          }
+        },
+        {
+          "id": "v6usebmkefkgcp5qgbvkwqyj",
+          "type": "Wait",
+          "options": {
+            "secondsToWaitFor": "3"
+          }
+        },
+        {
+          "id": "y64gzi335pgea3wlbbe8v92p",
+          "type": "Redirect",
+          "options": {
+            "url": "https://lastlink.com/p/C98F2075B/checkout-payment/"
+          },
+          "content": {
+            "url": "https://lastlink.com/p/C98F2075B/checkout-payment/",
+            "isNewTab": true
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "b0yodvq9l11ulfru97nwy8my",
+      "from": {
+        "eventId": "ah00t1oupo6nebm08nqy630u"
+      },
+      "to": {
+        "groupId": "j8isz7hfdul3ax78ixnqr1a5"
+      }
+    },
+    {
+      "id": "yp2s3z135nchvzcf78jhhing",
+      "from": {
+        "blockId": "v34587lcbrxioqgrokp7tnt9"
+      },
+      "to": {
+        "groupId": "bcuv7mp1upzz4acmmo731y1p"
+      }
+    },
+    {
+      "id": "iuebn1yph7uyeqmhem77ntki",
+      "from": {
+        "blockId": "srvh7blv4pkd0jtobf5k9nu7"
+      },
+      "to": {
+        "groupId": "ft3ulxqwvpa0vtdwj6i7urul"
+      }
+    },
+    {
+      "id": "giqgthax686opr9dhy6x8fku",
+      "from": {
+        "blockId": "wuycmherkf678q51gw5f5h24"
+      },
+      "to": {
+        "groupId": "cm24fevbqjy5lbjutbz2dn80"
+      }
+    },
+    {
+      "id": "oluiaaex8ddtk04kyke7bwte",
+      "from": {
+        "blockId": "dot6us61rl5hcguj3ghxz94s"
+      },
+      "to": {
+        "groupId": "afq8h25dynprtcpnwr7ymf7i"
+      }
+    },
+    {
+      "id": "kqf75rz8goggkqe9v2jyq4qo",
+      "from": {
+        "blockId": "aits08zwbxhsrcun7jlcnnt1"
+      },
+      "to": {
+        "groupId": "ozntaq9t7jsinghhk8ezhnlp"
+      }
+    },
+    {
+      "id": "z9taqnz1fn3t46bklf23lydr",
+      "from": {
+        "blockId": "zws372nzx01c5mr6nf2abhw7"
+      },
+      "to": {
+        "groupId": "glkwf5f0ybv6kaesprouuovm"
+      }
+    },
+    {
+      "id": "uv6on5dnqvnfbksouitien4n",
+      "from": {
+        "blockId": "na4lr7g9oxtf953whei2n6or"
+      },
+      "to": {
+        "groupId": "3eef504e61304963bf4efb3ebe98754e"
+      }
+    },
+    {
+      "id": "f81874e58f9047288b80",
+      "from": {
+        "blockId": "f0bdb79f2a534719a1136b6e"
+      },
+      "to": {
+        "groupId": "8b1718945c0c483db2b9baaf1f7ab141"
+      }
+    },
+    {
+      "id": "20ff98bbf05b4d4da87d",
+      "from": {
+        "blockId": "d7ea6cc9522944839327a727"
+      },
+      "to": {
+        "groupId": "19e1c65f288b4c81a38322f1df885a4e"
+      }
+    },
+    {
+      "id": "f9c054e345d34aa2a8b7",
+      "from": {
+        "blockId": "ddd70037529c4a5097752286"
+      },
+      "to": {
+        "groupId": "9049e6dd658f45129f96109934d138b9"
+      }
+    },
+    {
+      "id": "68d59b2eb0a14a319dc1",
+      "from": {
+        "blockId": "127689600b654098a3137425"
+      },
+      "to": {
+        "groupId": "847351de809c4f0e9deeccc413cc447d"
+      }
+    },
+    {
+      "id": "fcca4ab14b30429481ee",
+      "from": {
+        "blockId": "316abd292a8f4fbc9eb73ace"
+      },
+      "to": {
+        "groupId": "eb99f55d65084f51afb9bc52cf4e037c"
+      }
+    },
+    {
+      "id": "5855d0e795294fbe842b",
+      "from": {
+        "blockId": "28fcebb63844441bbabb758c"
+      },
+      "to": {
+        "groupId": "ecfc2899ba7a4cec9a63fb9806738a1b"
+      }
+    },
+    {
+      "id": "ee39c22b84574be38da9",
+      "from": {
+        "blockId": "77b04c926643462cb1d7a435"
+      },
+      "to": {
+        "groupId": "3729f02d8a1c445aa8ad1434eb56a353"
+      }
+    },
+    {
+      "id": "fd9b1ae7f72c428998e0",
+      "from": {
+        "blockId": "43ff0a5f2f384f25afcfaa8e"
+      },
+      "to": {
+        "groupId": "209facf9a2b94c978dc11b068e28f816"
+      }
+    },
+    {
+      "id": "6451ab6e26be41bda4d0",
+      "from": {
+        "blockId": "406f00768ac043419ef9236a"
+      },
+      "to": {
+        "groupId": "y1hukis4fs1kp5ncj5hdlgjf"
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "vtjch0odnwrsdhu2rpukcpk2k",
+      "name": "var_avatar"
+    },
+    {
+      "id": "viv61ffslhmirjrojy6lc6pab",
+      "name": "var_nome"
+    },
+    {
+      "id": "vd7wy5qpnr4imld4b3v8hh0oy",
+      "name": "var_urlWhatsapp"
+    },
+    {
+      "id": "vi6o3xs2pkaxp4y7uex0hf2tg",
+      "name": "var_urlBack"
+    },
+    {
+      "id": "vi8hg46lxsx62zqeem6wjty6e",
+      "name": "var_mensagem"
+    },
+    {
+      "id": "vfnbzji2r90xkn9syj9gujoku",
+      "name": "var_ativarIcon"
+    },
+    {
+      "id": "259da194b9a049edb7e0c04066cb96c3",
+      "name": "NOME",
+      "isSessionVariable": false
+    }
+  ],
+  "theme": {
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Image",
+        "content": "https://typebotemplates.site/br/dist/img/background.png"
+      }
+    },
+    "chat": {
+      "container": {
+        "backgroundColor": "transparent",
+        "color": "#303235"
+      },
+      "hostAvatar": {
+        "isEnabled": true,
+        "url": "https://s3.ecomsupabase.com/supabase/public/workspaces/jvitor010@hotmail.com/typebots/4366e56049494e5881df9c92ede76edd/hostAvatar?v=1774011445334"
+      },
+      "guestAvatar": {
+        "isEnabled": false
+      },
+      "hostBubbles": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#303235"
+      },
+      "guestBubbles": {
+        "backgroundColor": "#e1ffc7",
+        "color": "#000000"
+      },
+      "buttons": {
+        "backgroundColor": "#128C7E",
+        "color": "#FFFFFF"
+      },
+      "inputs": {
+        "backgroundColor": "#FFFFFF",
+        "color": "#000000",
+        "placeholderColor": "#28292a"
+      },
+      "roundness": "large"
+    },
+    "customCss": ""
+  },
+  "selectedThemeTemplateId": null,
+  "settings": {
+    "general": {
+      "isBrandingEnabled": false,
+      "isInputPrefillEnabled": true,
+      "rememberUser": {
+        "isEnabled": false
+      }
+    },
+    "typingEmulation": {
+      "enabled": true,
+      "speed": 300,
+      "maxDelay": 1.5
+    },
+    "metadata": {
+      "title": "Lipedema Sem Complicações — Fluxo Vital",
+      "description": "Método natural para alívio do lipedema em 21 dias. Conheça o protocolo EDH™ que já ajudou centenas de mulheres.",
+      "imageUrl": "https://typebotemplates.site/assets/img/home-bg.jpg",
+      "favIconUrl": "https://typebotemplates.site/assets/img/favicon.png",
+      "customHeadCode": "",
+      "googleTagManagerId": ""
+    },
+    "publicShare": {
+      "isEnabled": true
+    },
+    "security": {
+      "allowedOrigins": [
+        "https://chat.fluxovitallipedema.top"
+      ]
+    }
+  },
+  "createdAt": "2026-02-23T01:48:01.982Z",
+  "updatedAt": "2026-03-20T12:57:42.269Z",
+  "icon": null,
+  "folderId": null,
+  "publicId": "lipedema-sem-complica-es-1nwkaag",
+  "customDomain": "chat.fluxovitallipedema.top",
+  "workspaceId": "jvitor010@hotmail.com",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null,
+  "riskLevel": null
+}
